@@ -609,7 +609,7 @@ of universal, permissionless standards for tokenized asset classes.</p>
 <li>A non-fungible, non-divisible debt token is minted to the creditor and mapped to the above commitment.</li>
 <li>The principal amount is transferred from the creditor to the debtor (minus fees) and any keepers&apos; fees are similarly transferred from the creditor.</li>
 </ol>
-<p>This process is detailed below.  First, we formalize the the format of data packets in the protocol.</p>
+<p>This process is detailed below.  First, we formalize the format of data packets in the protocol.</p>
 <h2 id="message-types">Message Types</h2>
 <p>Communications between the different agents and keepers in the protocol are comprised of data packets that we refer to as <strong>Debt Orders</strong>.</p>
 <h3 id="debt-orders">Debt Orders</h3>
@@ -659,7 +659,7 @@ of universal, permissionless standards for tokenized asset classes.</p>
 <tr>
 <td><code>creditorFee</code></td>
 <td><code>uint256</code></td>
-<td>Total units of principal token the the creditor must pay on top of the principal amount.  Note that the total number of fees paid by the debtor and creditor <em>must</em> equal the total amount of fees paid out to the underwriter and relayer.</td>
+<td>Total units of principal token the creditor must pay on top of the principal amount.  Note that the total number of fees paid by the debtor and creditor <em>must</em> equal the total amount of fees paid out to the underwriter and relayer.</td>
 </tr>
 <tr>
 <td><code>relayer</code></td>
@@ -758,7 +758,7 @@ of universal, permissionless standards for tokenized asset classes.</p>
 </tbody>
 </table>
 <h3 id="debtorcreditor-commitment-hash">Debtor/Creditor Commitment Hash</h3>
-<p>The debtor/creditor commitment hash is the payload signed by a debtor or creditor in order to indicate her consent to the parameters of the debt order.  It is comprised of the Keccak 256 hash of the the following subset of the debt order parameters:</p>
+<p>The debtor/creditor commitment hash is the payload signed by a debtor or creditor in order to indicate her consent to the parameters of the debt order.  It is comprised of the Keccak 256 hash of the following subset of the debt order parameters:</p>
 <table>
 <thead>
 <tr>
@@ -796,7 +796,7 @@ of universal, permissionless standards for tokenized asset classes.</p>
 <tr>
 <td><code>creditorFee</code></td>
 <td><code>uint256</code></td>
-<td>Total units of principal token the the creditor must pay on top of the principal amount.</td>
+<td>Total units of principal token the creditor must pay on top of the principal amount.</td>
 </tr>
 <tr>
 <td><code>relayer</code></td>
@@ -821,7 +821,7 @@ of universal, permissionless standards for tokenized asset classes.</p>
 </tbody>
 </table>
 <h3 id="underwriter-commitment-hash">Underwriter Commitment Hash</h3>
-<p>The underwriter commitment hash is the payload signed by a underwriter in order to indicate her consent to the parameters of the debt order.  The underwriter is given a different subset of parameters to sign so that debtors will not need to request new signatures from the underwriter for each relayer with whom they broadcast their debt order -- we will elaborate on this further below.   The underwriter commitment is comprised of the Keccak 256 hash of the the following subset of the debt order parameters:</p>
+<p>The underwriter commitment hash is the payload signed by a underwriter in order to indicate her consent to the parameters of the debt order.  The underwriter is given a different subset of parameters to sign so that debtors will not need to request new signatures from the underwriter for each relayer with whom they broadcast their debt order -- we will elaborate on this further below.   The underwriter commitment is comprised of the Keccak 256 hash of the following subset of the debt order parameters:</p>
 <table>
 <thead>
 <tr>
