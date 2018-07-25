@@ -71,7 +71,7 @@ Relayers in Dharma protocol perform an analogous function to relayers in the 0x 
 
 ### Contracts
 
-Dharma protocol leverages several contracts deployed on the Ethereum network.  We highlight a few that are particularly relevant to understanding the prtocol's mechanics.
+Dharma protocol leverages several contracts deployed on the Ethereum network.  We highlight a few that are particularly relevant to understanding the protocol's mechanics.
 
 1. **Debt Kernel**
 
